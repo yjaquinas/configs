@@ -1,0 +1,51 @@
+{
+  "theme": "One Dark",
+  "base_keymap": "VSCode",
+  "buffer_font_family": "Red Hat Mono", //"Zed Sans",
+  "buffer_font_size": 13,
+  "buffer_line_height": "standard",
+  "ui_font_family": "Red Hat Mono", //"Zed Sans",
+  "ui_font_size": 14,
+  "ui_font_features": {
+    "calt": false
+  },
+  "terminal": {
+    "font_size": 13,
+    "font_family": "MesloLGS Nerd Font Mono"
+  },
+  "show_completions_on_input": true,
+  "show_completion_documentation": true,
+  "show_wrap_guides": true,
+  "wrap_guides": [
+    88
+  ],
+  "use_autoclose": true,
+  "show_whitespaces": "selection",
+  "scrollbar": {
+    "show": "auto",
+    "git_diff": true,
+    "selections": true
+  },
+  "tabs": {
+    "git_status": true
+  },
+  "remove_trailing_whitespace_on_save": true,
+  "extend_comment_on_newline": true,
+  "ensure_final_newline_on_save": true,
+  "format_on_save": "on",
+  "use_on_type_format": true,
+  "formatter": "auto",
+  "enable_language_server": true,
+  "preferred_line_length": 80,
+  "hard_tabs": false,
+  "tab_size": 4,
+  "auto_update": true,
+  "features": {
+    "copilot": false
+  },
+  "languages": {
+    "JSON": {
+      "tab_size": 2
+    }
+  }
+}
