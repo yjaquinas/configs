@@ -16,9 +16,7 @@
   "show_completions_on_input": true,
   "show_completion_documentation": true,
   "show_wrap_guides": true,
-  "wrap_guides": [
-    88
-  ],
+  "wrap_guides": [88],
   "use_autoclose": true,
   "show_whitespaces": "selection",
   "scrollbar": {
@@ -29,13 +27,13 @@
   "tabs": {
     "git_status": true
   },
+  "format_on_save": "on",
+  "formatter": "auto",
+  "enable_language_server": true,
+  "use_on_type_format": true,
   "remove_trailing_whitespace_on_save": true,
   "extend_comment_on_newline": true,
   "ensure_final_newline_on_save": true,
-  "format_on_save": "on",
-  "use_on_type_format": true,
-  "formatter": "auto",
-  "enable_language_server": true,
   "preferred_line_length": 80,
   "hard_tabs": false,
   "tab_size": 4,
@@ -43,7 +41,19 @@
   "features": {
     "copilot": false
   },
-  "languages": {
+  "language_overrides": {
+    "Python": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "bash",
+          "arguments": [
+            "-c",
+            "ruff check --exit-zero --fix --unsafe-fixes --stdin-filename {buffer_path} | ruff format --stdin-filename {buffer_path}"
+          ]
+        }
+      }
+    },
     "JSON": {
       "tab_size": 2
     }
