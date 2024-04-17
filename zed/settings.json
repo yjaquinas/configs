@@ -49,7 +49,7 @@
           "command": "bash",
           "arguments": [
             "-c",
-            "ruff check --exit-zero --fix --unsafe-fixes --stdin-filename {buffer_path} | ruff format --stdin-filename {buffer_path}"
+            "ruff check --select=I --exit-zero --fix --stdin-filename {buffer_path} | ruff format --stdin-filename {buffer_path}"
           ]
         }
       }
