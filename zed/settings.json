@@ -34,7 +34,6 @@
   "remove_trailing_whitespace_on_save": true,
   "extend_comment_on_newline": true,
   "ensure_final_newline_on_save": true,
-  "preferred_line_length": 80,
   "hard_tabs": false,
   "tab_size": 4,
   "auto_update": true,
@@ -46,11 +45,8 @@
       "format_on_save": "on",
       "formatter": {
         "external": {
-          "command": "bash",
-          "arguments": [
-            "-c",
-            "ruff check --select=I --exit-zero --fix --stdin-filename {buffer_path} | ruff format --stdin-filename {buffer_path}"
-          ]
+          "command": "black",
+          "arguments": ["-", "--line-length=88"]
         }
       }
     },
