@@ -1,10 +1,10 @@
 {
   "theme": "One Dark",
   "base_keymap": "VSCode",
-  "buffer_font_family": "Red Hat Mono", //"Zed Sans",
+  "buffer_font_family": "Red Hat Mono",
   "buffer_font_size": 13,
   "buffer_line_height": "standard",
-  "ui_font_family": "Red Hat Mono", //"Zed Sans",
+  "ui_font_family": "Red Hat Mono",
   "ui_font_size": 14,
   "ui_font_features": {
     "calt": false
@@ -45,8 +45,11 @@
       "format_on_save": "on",
       "formatter": {
         "external": {
-          "command": "black",
-          "arguments": ["-", "--line-length=88"]
+          "command": "bash",
+          "arguments": [
+            "-c",
+            "ruff check --fix --select=I,N --stdin-filename={buffer_path} | ruff format --line-length=88 --stdin-filename={buffer_path}"
+          ]
         }
       }
     },
