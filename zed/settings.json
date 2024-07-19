@@ -1,60 +1,77 @@
 {
-  "theme": "One Dark",
-  "base_keymap": "VSCode",
-  "buffer_font_family": "Red Hat Mono",
-  "buffer_font_size": 13,
-  "buffer_line_height": "standard",
-  "ui_font_family": "Red Hat Mono",
-  "ui_font_size": 14,
-  "ui_font_features": {
-    "calt": false
-  },
-  "terminal": {
-    "font_size": 13,
-    "font_family": "MesloLGS Nerd Font Mono"
-  },
-  "show_completions_on_input": true,
-  "show_completion_documentation": true,
-  "show_wrap_guides": true,
-  "wrap_guides": [88],
-  "use_autoclose": true,
-  "show_whitespaces": "selection",
-  "scrollbar": {
-    "show": "auto",
-    "git_diff": true,
-    "selections": true
-  },
-  "tabs": {
-    "git_status": true
-  },
-  "format_on_save": "on",
-  "formatter": "auto",
-  "enable_language_server": true,
-  "use_on_type_format": true,
-  "remove_trailing_whitespace_on_save": true,
-  "extend_comment_on_newline": true,
-  "ensure_final_newline_on_save": true,
-  "hard_tabs": false,
-  "tab_size": 4,
-  "auto_update": true,
-  "features": {
-    "copilot": false
-  },
-  "language_overrides": {
-    "Python": {
-      "format_on_save": "on",
-      "formatter": {
-        "external": {
-          "command": "bash",
-          "arguments": [
-            "-c",
-            "ruff check --fix --select=I,N --stdin-filename={buffer_path} | ruff format --line-length=88 --stdin-filename={buffer_path}"
-          ]
-        }
-      }
+    "theme": "One Dark",
+    "base_keymap": "VSCode",
+    "buffer_font_family": "Red Hat Mono",
+    "buffer_font_size": 13,
+    "buffer_line_height": "standard",
+    "ui_font_family": "Red Hat Mono",
+    "ui_font_size": 14,
+    "ui_font_features": {
+        "calt": false
     },
-    "JSON": {
-      "tab_size": 2
+    "terminal": {
+        "font_size": 13,
+        "font_family": "MesloLGS Nerd Font Mono"
+    },
+    "show_completions_on_input": true,
+    "show_completion_documentation": true,
+    "show_wrap_guides": true,
+    "wrap_guides": [120],
+    "soft_wrap": "editor_width",
+    "use_autoclose": true,
+    "show_whitespaces": "selection",
+    "scrollbar": {
+        "show": "auto",
+        "git_diff": true,
+        "selections": true
+    },
+    "toolbar": {
+        "breadcrumbs": true
+    },
+    "tabs": {
+        "git_status": true
+    },
+    "format_on_save": "on",
+    "formatter": "auto",
+    "enable_language_server": true,
+    "use_on_type_format": true,
+    "remove_trailing_whitespace_on_save": true,
+    "extend_comment_on_newline": true,
+    "ensure_final_newline_on_save": true,
+    "hard_tabs": false,
+    "tab_size": 4,
+    "auto_update": true,
+    "features": {
+        "copilot": false
+    },
+    "languages": {
+        "HTML": {
+            "tab_size": 2
+        },
+        "JSON": {
+            "tab_size": 2
+        },
+        "Python": {
+            "format_on_save": "on",
+            "formatter": {
+                "external": {
+                    "command": "bash",
+                    "arguments": [
+                        "-c",
+                        "ruff check --fix --select=I,N --stdin-filename={buffer_path} | ruff format --line-length=88 --stdin-filename={buffer_path}"
+                    ]
+                }
+            }
+        },
+        "detect_venv": {
+            "on": {
+                // Default directories to search for virtual environments, relative
+                // to the current working directory. We recommend overriding this
+                // in your project's settings, rather than globally.
+                "directories": [".env", "env", ".venv", "venv"],
+                // Can also be 'csh', 'fish', and `nushell`
+                "activate_script": "default"
+            }
+        }
     }
-  }
 }
