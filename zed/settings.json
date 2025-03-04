@@ -1,5 +1,5 @@
 {
-    "theme": "One Dark",
+    "theme": "Catppuccin Frappé",
     "base_keymap": "VSCode",
     "buffer_font_family": "Red Hat Mono",
     "buffer_font_size": 13,
@@ -11,7 +11,7 @@
     },
     "terminal": {
         "font_size": 13,
-        "font_family": "MesloLGS Nerd Font Mono"
+        "font_family": "Red Hat Mono"
     },
     "show_completions_on_input": true,
     "show_completion_documentation": true,
@@ -58,7 +58,7 @@
                     "command": "bash",
                     "arguments": [
                         "-c",
-                        "ruff check --fix --select=I,N --stdin-filename={buffer_path} | ruff format --line-length=88 --stdin-filename={buffer_path}"
+                        "source .venv/bin/activate && ruff check --fix --select=I,N --stdin-filename={buffer_path} | ruff format --line-length=88 --stdin-filename={buffer_path}"
                     ]
                 }
             }
